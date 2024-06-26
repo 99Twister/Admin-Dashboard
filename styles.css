@@ -33,6 +33,11 @@ nav > div {
 	font-size: 1.2rem;
 }
 
+.nav-head > h1 {
+	padding: 0;
+	margin: 0;
+}
+
 .nav-list {
 	display: grid;
 	gap: 1.5rem;
@@ -57,15 +62,12 @@ nav > div {
 
 .nav-list > * > p {
 	justify-self: start;
+	padding: 0;
+	margin: 0;
 }
 
 .nav-list > * > svg {
 	justify-self: center;
 	max-width: 24px;
 	max-height: 24px;
-}
-
-h1, p {
-	padding: 0;
-	margin: 0;
 }
