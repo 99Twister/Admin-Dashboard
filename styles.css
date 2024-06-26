@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
+	display: flex;
   padding: 0;
   margin: 0;
   font-family: "Roboto";
@@ -70,4 +71,48 @@ nav > div {
 	justify-self: center;
 	max-width: 24px;
 	max-height: 24px;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+}
+
+#header {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	height: 150px;
+}
+
+#search-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 3rem 0 3rem;
+}
+
+#search-bar > input {
+	appearance: none;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-size: 1rem;
+	background-color: rgb(227, 235, 239);
+	border:none;
+	border-radius: 100px;
+	transition: background-color 0.1s;
+}
+
+#search-bar > input:focus {
+	outline: none;
+	background-color: rgb(220, 227, 231);
+}
+
+#search-bar label {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	padding-right: 1rem;
 }
