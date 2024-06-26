@@ -46,6 +46,7 @@ nav > div {
 
 .nav-list > * {
 	appearance: none;
+	cursor: pointer;
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
