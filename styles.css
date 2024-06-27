@@ -22,6 +22,14 @@ nav > div {
 	gap: 3.5rem;
 }
 
+.nav-head,
+.nav-head > h1,
+.nav-list > *,
+.nav-list > * > p {
+	padding: 0;
+	margin: 0;
+}
+
 .nav-head {
 	display: grid;
 	grid-template-columns: 48px 1fr;
@@ -34,24 +42,19 @@ nav > div {
 	font-size: 1.2rem;
 }
 
-.nav-head > h1 {
-	padding: 0;
-	margin: 0;
-}
-
 .nav-list {
 	display: grid;
-	gap: 1.5rem;
+	gap: 1rem;
 }
 
 .nav-list > * {
 	appearance: none;
 	cursor: pointer;
+	position: relative;
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
-	padding: 0;
-	margin: 0;
+	padding: 5px;
 	align-items: center;
 	border: none;
 	background: none;
@@ -60,12 +63,21 @@ nav > div {
 	font-family: "Roboto";
 	font-weight: 700;
 	font-size: 1.3rem;
+	border-radius: 1rem;
+	transition: scale 0.1s, background-color 0.1s;
+}
+
+.nav-list > *:hover {
+	scale: 1.05;
+	background-color: rgb(0, 143, 246);
+}
+
+.nav-list > *:active {
+	background-color: rgb(0, 136, 233);
 }
 
 .nav-list > * > p {
 	justify-self: start;
-	padding: 0;
-	margin: 0;
 }
 
 .nav-list > * > svg {
