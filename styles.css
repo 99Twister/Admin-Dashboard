@@ -112,8 +112,19 @@ main {
 }
 
 #search-bar label {
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	min-width: 24px;
+	min-height: 24px;
+	padding-right: 1rem;
+	transition: scale 0.1s;
+}
+
+#search-bar label:active {
 	cursor: pointer;
 	width: 24px;
 	height: 24px;
 	padding-right: 1rem;
+	scale: 0.9;
 }
