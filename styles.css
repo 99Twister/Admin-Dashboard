@@ -34,8 +34,6 @@ nav > div {
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
-	padding: 0;
-	margin: 0;
 	align-items: center;
 	fill: white;
 	font-weight: 700;
@@ -102,7 +100,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 3rem 0 3rem;
+	padding: 0 1.5rem 0 3rem;
 }
 
 #search-bar > input {
@@ -123,7 +121,7 @@ main {
 	background-color: rgb(220, 227, 231);
 }
 
-#search-bar label {
+#search-bar > label {
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
@@ -133,10 +131,47 @@ main {
 	transition: scale 0.1s;
 }
 
-#search-bar label:active {
+#search-bar > label:active {
 	cursor: pointer;
 	width: 24px;
 	height: 24px;
 	padding-right: 1rem;
 	scale: 0.9;
+}
+
+#profile {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding: 0 3rem 0 1.5rem;
+	font-size: 1.3rem;
+}
+
+#alert{
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	min-width: 24px;
+	min-height: 24px;
+	transition: scale 0.1s;
+}
+
+#alert:active {
+	scale: 0.9;
+}
+
+#avatar {
+	cursor: pointer;
+	min-width: 48px;
+	min-height: 48px;
+	margin: 0 2rem 0 2rem;
+	border-radius: 100%;
+	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.B3yNdGmBP5V5pT3BzMo85QHaHa%26pid%3DApi&f=1&ipt=7012d229670099356aa5b137c65e4e7c1539c3fae397afa93ae5d65bdd0f504e&ipo=images);
+	background-size: 100%;
+}
+
+#username > p {
+	cursor: pointer;
+	text-align: start;
+	margin: 0;
 }
