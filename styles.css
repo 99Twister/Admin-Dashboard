@@ -31,6 +31,7 @@ nav > div {
 }
 
 .nav-head {
+	cursor: default;
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
