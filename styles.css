@@ -104,6 +104,7 @@ main {
 }
 
 #search-bar > input {
+	cursor: text;
 	width: 100%;
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
