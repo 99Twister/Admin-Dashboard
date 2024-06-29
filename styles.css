@@ -86,15 +86,17 @@ button, input {
 }
 
 main {
+	display: flex;
+	flex-direction: column;
 	width: 100vw;
-	height: 100vh;
 }
 
 #header {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
 	grid-template-rows: 2fr 3fr;
-	box-shadow: 0 10px 10px -10px rgb(182, 182, 182);
+	box-shadow: 0 10px 10px -10px rgb(175, 175, 175);
+	z-index: 1;
 }
 
 #search-bar {
@@ -232,4 +234,89 @@ main {
 
 #media-options button:active {
 	background-color: rgb(0, 136, 233);
+}
+
+#feed {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 4.5rem 1.5rem 4.5rem 1.5rem;
+	background-color: rgb(227, 235, 239);
+}
+
+#feed > div {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 1.5rem;
+	width: 100%;
+
+}
+
+#projects {
+	position: relative;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+	width: 100%;
+	height: fit-content;
+}
+
+#projects::before {
+	content: "Your Projects";
+	position: absolute;
+	top: -2.3rem;
+	font-size: 1.3rem;
+}
+
+.project-card {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	padding: 2rem 1.5rem 2rem calc(1.5rem + 10px);
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 5px 5px 5px -5px rgb(175, 175, 175);
+}
+
+.project-card div:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 100%;
+	border-radius: 50px 0 0px 50px;
+	background-color: orange;
+}
+
+.project-card p {
+	font-size: 1.1rem;
+}
+
+.project-card > div > p + p{
+	margin-top: 0.3rem;
+	font-weight: 400;
+	font-size: 1rem;
+	color: gray;
+}
+
+.project-options {
+	display: flex;
+	justify-content: end;
+	gap: 1rem;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.project-options * {
+	max-height: 1.5rem;
+}
+
+.project-options > svg + svg + svg {
+	rotate: -90deg;
+}
+
+#news {
+	box-sizing: border-box;
+	width: 100%;
 }
