@@ -5,7 +5,7 @@
 	--bg-theme: rgb(0, 150, 255);
 	--btn-hover: rgb(0, 140, 245);
 	--btn-active: rgb(0, 130, 235);
-	--accent: rgb(225, 235, 240)
+	--accent: rgb(225, 235, 240);
 }
 
 body {
@@ -274,6 +274,18 @@ main {
 	grid-template-columns: 1fr 1fr;
 	gap: 1.5rem;
 	width: 100%;
+}
+
+@media (max-width: 1300px) {
+
+	#feed > div {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	#projects {
+		grid-template-columns: 1fr;
+	}
+
 }
 
 #projects::before {
