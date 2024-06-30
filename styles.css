@@ -263,7 +263,6 @@ main {
 	grid-template-columns: 3fr 1fr;
 	gap: 1.5rem;
 	width: 100%;
-
 }
 
 #projects {
@@ -398,6 +397,10 @@ main {
 
 .trending-user > div.avatar {
 	margin-right: 1rem;
+}
+
+.handle > p:first-child {
+	cursor: pointer;
 }
 
 .handle > p:last-child {
