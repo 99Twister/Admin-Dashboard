@@ -188,7 +188,7 @@ main {
 	margin: 0 2rem 0 2rem;
 }
 
-#username > p {
+#profile > div:last-child {
 	cursor: pointer;
 	text-align: start;
 }
@@ -211,6 +211,10 @@ main {
 #welcome-message > div + div > p {
 	font-size: 0.8rem;
 	padding-bottom: 0.2rem;
+}
+
+#welcome-message > div + div > h2 {
+	cursor: pointer;
 }
 
 #media-options {
@@ -302,7 +306,9 @@ main {
 	background-color: orange;
 }
 
-.project-card p {
+.project-card p:first-child {
+	cursor: pointer;
+	width: fit-content;
 	font-size: 1.1rem;
 }
 
@@ -322,10 +328,18 @@ main {
 }
 
 .project-options * {
+	cursor: pointer;
 	max-height: 1.5rem;
+	transition: scale 0.1s;
 }
 
-.project-options > svg + svg + svg {
+.project-options *:active {
+	cursor: pointer;
+	max-height: 1.5rem;
+	scale: 0.9;
+}
+
+.project-options > svg:last-child {
 	rotate: -90deg;
 }
 
@@ -364,6 +378,10 @@ main {
 
 #announcments > *:first-child {
 	border: none;
+}
+
+#announcments > * p:first-child {
+	cursor: pointer;
 }
 
 #announcments > * p:last-child {
