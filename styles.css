@@ -169,19 +169,19 @@ main {
 }
 
 .avatar1 {
-	background-image: url(images/avatars/avatar_1.jpg);
+	background-image: url(images/avatar_1.jpg);
 }
 
 .avatar2 {
-	background-image: url(images/avatars/avatar_2.jpg);
+	background-image: url(images/avatar_2.jpg);
 }
 
 .avatar3 {
-	background-image: url(images/avatars/avatar_3.jpg);
+	background-image: url(images/avatar_3.jpg);
 }
 
 .avatar4 {
-	background-image: url(images/avatars/avatar_4.jpg);
+	background-image: url(images/avatar_4.jpg);
 }
 
 #profile > div.avatar {
