@@ -1,25 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+	--shadow-color: rgb(175, 175, 175);
+	--bg-theme: rgb(0, 150, 255);
+	--btn-hover: rgb(0, 140, 245);
+	--btn-active: rgb(0, 130, 235);
+	--accent: rgb(225, 235, 240)
+}
+
 body {
 	display: flex;
   padding: 0;
   margin: 0;
   font-family: "Roboto";
   font-weight: 700;
-}
-
-nav {
-	box-sizing: border-box;
-	width: fit-content;
-	min-height: 100vh;
-	padding: 1.5rem 5rem 3.5rem 1.5rem;
-  background-color: rgb(0, 149, 255);
-  color: white;
-}
-
-nav > div {
-	display: grid;
-	gap: 3.5rem;
 }
 
 h1, h2, p {
@@ -34,6 +28,22 @@ button, input {
 	font-weight: inherit;
 	border: none;
 	background-color: inherit;
+	color: inherit;
+}
+
+nav {
+	box-sizing: border-box;
+	width: fit-content;
+	min-height: 100vh;
+	padding: 1.5rem 5rem 3.5rem 1.5rem;
+  background-color: var(--bg-theme);
+  color: white;
+	fill: white;
+}
+
+nav > div {
+	display: grid;
+	gap: 3.5rem;
 }
 
 .nav-head {
@@ -42,7 +52,6 @@ button, input {
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
 	align-items: center;
-	fill: white;
 	font-weight: 700;
 	font-size: 1.2rem;
 }
@@ -57,10 +66,9 @@ button, input {
 	display: grid;
 	grid-template-columns: 48px 1fr;
 	gap: 1rem;
+	justify-items: start;
 	padding: 5px;
 	align-items: center;
-	color: white;
-	fill: white;
 	font-size: 1.3rem;
 	border-radius: 100px;
 	transition: scale 0.1s, background-color 0.1s;
@@ -68,18 +76,14 @@ button, input {
 
 .nav-list > *:hover {
 	scale: 1.05;
-	background-color: rgb(0, 143, 246);
+	background-color: var(--btn-hover);
 }
 
 .nav-list > *:active {
-	background-color: rgb(0, 136, 233);
+	background-color: var(--btn-active);
 }
 
-.nav-list > * > p {
-	justify-self: start;
-}
-
-.nav-list > * > svg {
+.nav-list svg {
 	justify-self: center;
 	max-width: 24px;
 	max-height: 24px;
@@ -95,7 +99,7 @@ main {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
 	grid-template-rows: 2fr 3fr;
-	box-shadow: 0 10px 10px -10px rgb(175, 175, 175);
+	box-shadow: 0 10px 10px -10px var(--shadow-color);
 	z-index: 1;
 }
 
@@ -103,7 +107,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 1.5rem 0 3rem;
+	margin: 0 1.5rem 0 3rem;
 }
 
 #search-bar > input {
@@ -111,14 +115,14 @@ main {
 	width: 100%;
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
-	background-color: rgb(227, 235, 239);
+	background-color: var(--accent);
 	border-radius: 100px;
 	transition: background-color 0.1s;
 }
 
 #search-bar > input:focus {
 	outline: none;
-	background-color: rgb(220, 227, 231);
+	background-color: rgb(220, 230, 235);
 }
 
 #search-bar > label {
@@ -127,15 +131,11 @@ main {
 	cursor: pointer;
 	min-width: 24px;
 	min-height: 24px;
-	padding-right: 1rem;
+	margin-right: 1rem;
 	transition: scale 0.1s;
 }
 
 #search-bar > label:active {
-	cursor: pointer;
-	width: 24px;
-	height: 24px;
-	padding-right: 1rem;
 	scale: 0.9;
 }
 
@@ -143,11 +143,11 @@ main {
 	display: flex;
 	justify-content: end;
 	align-items: center;
-	padding: 0 3rem 0 1.5rem;
+	margin: 0 3rem 0 1.5rem;
 	font-size: 1.3rem;
 }
 
-#alert{
+#profile > div:first-child {
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
@@ -156,7 +156,7 @@ main {
 	transition: scale 0.1s;
 }
 
-#alert:active {
+#profile > div:first-child:active {
 	scale: 0.9;
 }
 
@@ -196,7 +196,7 @@ main {
 #welcome-message {
 	display: flex;
 	align-items: center;
-	padding: 1rem 1.5rem 1rem 3rem;
+	margin: 1rem 1.5rem 1rem 3rem;
 }
 
 #welcome-message > div.avatar {
@@ -205,12 +205,12 @@ main {
 }
 
 #welcome-message > div + div {
-	padding-left: 1.5rem;
+	margin-left: 1.5rem;
 }
 
 #welcome-message > div + div > p {
 	font-size: 0.8rem;
-	padding-bottom: 0.2rem;
+	margin-bottom: 0.2rem;
 }
 
 #welcome-message > div + div > h2 {
@@ -221,11 +221,10 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 2rem;
-	padding: 0 3rem 0 1.5rem;
+	margin: 0 3rem 0 1.5rem;
 }
 
 #media-options > div {
-	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -239,7 +238,7 @@ main {
 	height: fit-content;
 	padding: 0.6rem;
 	font-size: 1.2rem;
-	background-color: rgb(0, 149, 255);
+	background-color: var(--bg-theme);
 	border-radius: 100px;
 	color: white;
 	transition: scale 0.1s, background-color 0.1s;
@@ -247,11 +246,11 @@ main {
 
 #media-options button:hover {
 	scale: 1.05;
-	background-color: rgb(0, 143, 246);
+	background-color: var(--btn-hover);
 }
 
 #media-options button:active {
-	background-color: rgb(0, 136, 233);
+	background-color: var(--btn-active);
 }
 
 #feed {
@@ -259,7 +258,7 @@ main {
 	width: 100%;
 	height: 100%;
 	padding: 4.5rem 1.5rem 4.5rem 1.5rem;
-	background-color: rgb(227, 235, 239);
+	background-color: var(--accent);
 }
 
 #feed > div {
@@ -270,13 +269,11 @@ main {
 }
 
 #projects {
-	box-sizing: border-box;
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1.5rem;
 	width: 100%;
-	height: fit-content;
 }
 
 #projects::before {
@@ -293,7 +290,7 @@ main {
 	padding: 1.7rem 1.5rem 1.7rem calc(1.5rem + 10px);
 	border-radius: 10px;
 	background-color: white;
-	box-shadow: 5px 5px 5px -5px rgb(175, 175, 175);
+	box-shadow: 5px 5px 5px -5px var(--shadow-color);
 }
 
 .project-card div:first-child {
@@ -312,7 +309,7 @@ main {
 	font-size: 1.1rem;
 }
 
-.project-card > div > p + p{
+.project-card p:last-child {
 	margin-top: 0.3rem;
 	font-weight: 400;
 	font-size: 1rem;
@@ -329,22 +326,19 @@ main {
 
 .project-options * {
 	cursor: pointer;
-	max-height: 1.5rem;
+	max-height: 24px;
 	transition: scale 0.1s;
-}
-
-.project-options *:active {
-	cursor: pointer;
-	max-height: 1.5rem;
-	scale: 0.9;
 }
 
 .project-options > svg:last-child {
 	rotate: -90deg;
 }
 
+.project-options *:active {
+	scale: 0.9;
+}
+
 #news {
-	box-sizing: border-box;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	gap: 4.5rem;
@@ -359,7 +353,7 @@ main {
 	padding: 1.5rem;
 	border-radius: 10px;
 	background-color: white;
-	box-shadow: 5px 5px 5px -5px rgb(175, 175, 175);
+	box-shadow: 5px 5px 5px -5px var(--shadow-color);
 }
 
 #announcments::before {
@@ -373,7 +367,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border-top: 2px solid rgb(200, 200, 200);
+	border-top: 2px solid var(--accent);
 }
 
 #announcments > *:first-child {
@@ -398,7 +392,7 @@ main {
 	padding: 1.5rem;
 	border-radius: 10px;
 	background-color: white;
-	box-shadow: 5px 5px 5px -5px rgb(175, 175, 175);
+	box-shadow: 5px 5px 5px -5px var(--shadow-color);
 }
 
 #trending::before {
@@ -417,11 +411,11 @@ main {
 	margin-right: 1rem;
 }
 
-.handle > p:first-child {
+.trending-user p:first-child {
 	cursor: pointer;
 }
 
-.handle > p:last-child {
+.trending-user p:last-child {
 	height: fit-content;
 	margin-top: 0.2rem;
 	font-weight: 400;
