@@ -160,14 +160,32 @@ main {
 	scale: 0.9;
 }
 
-#avatar {
+.avatar {
 	cursor: pointer;
 	min-width: 48px;
 	min-height: 48px;
-	margin: 0 2rem 0 2rem;
 	border-radius: 100%;
-	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.B3yNdGmBP5V5pT3BzMo85QHaHa%26pid%3DApi&f=1&ipt=7012d229670099356aa5b137c65e4e7c1539c3fae397afa93ae5d65bdd0f504e&ipo=images);
 	background-size: 100%;
+}
+
+.avatar1 {
+	background-image: url(images/avatar1.jpg);
+}
+
+.avatar2 {
+	background-image: url(images/avatar2.jpg);
+}
+
+.avatar3 {
+	background-image: url(images/avatar3.jpg);
+}
+
+.avatar4 {
+	background-image: url(images/avatar4.jpg);
+}
+
+#profile > div.avatar {
+	margin: 0 2rem 0 2rem;
 }
 
 #username > p {
@@ -181,13 +199,9 @@ main {
 	padding: 1rem 1.5rem 1rem 3rem;
 }
 
-#welcome-avatar {
-	cursor: pointer;
+#welcome-message > div.avatar {
 	min-width: 74px;
 	min-height: 74px;
-	border-radius: 100%;
-	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.B3yNdGmBP5V5pT3BzMo85QHaHa%26pid%3DApi&f=1&ipt=7012d229670099356aa5b137c65e4e7c1539c3fae397afa93ae5d65bdd0f504e&ipo=images);
-	background-size: 100%;
 }
 
 #welcome-message > div + div {
@@ -382,18 +396,11 @@ main {
 	align-items: center;
 }
 
-.trending-avatar {
-	cursor: pointer;
-	min-width: 48px;
-	min-height: 48px;
-	
+.trending-user > div.avatar {
 	margin-right: 1rem;
-	border-radius: 100%;
-	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.B3yNdGmBP5V5pT3BzMo85QHaHa%26pid%3DApi&f=1&ipt=7012d229670099356aa5b137c65e4e7c1539c3fae397afa93ae5d65bdd0f504e&ipo=images);
-	background-size: 100%;
 }
 
-.trending-handle > p:last-child {
+.handle > p:last-child {
 	height: fit-content;
 	margin-top: 0.2rem;
 	font-weight: 400;
